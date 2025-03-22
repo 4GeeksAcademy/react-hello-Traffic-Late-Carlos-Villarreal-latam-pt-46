@@ -1,12 +1,25 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
 
-//create your first component
-const Home = () => {
-	return (
-		<div className="support">	
+// Create your first component
+
+	function TrafficLight ()  {
+
+		/* Creo la constante que sera para uso de los colores*/
+		const [color, setColor] = useState("red");
+
+		/* Creo la constante que tendra el IF para el clic del boton*/
+		const clic= () => {
+			if (color === "red") setColor("yellow");
+			else if (color === "yellow") setColor("green");
+			else setColor("red");
+		  };
+		  	
+
+    return (
+					
+			
+			<div className="support">	
 				<div className="app d-inline-flex flex-column flex-nowrap"> 
 					<div  onClick={() => setColor("red")}    className={color === "red"    ? "red light" :     "red" }  	>		</div>
 					<div  onClick={() => setColor("yellow")} className={color === "yellow" ? "yellow light ":  "yellow" } 	>		</div>
@@ -20,7 +33,15 @@ const Home = () => {
 				</div>
 		
 			</div> 
+
+
+		
+
+			
+
 	)
+
+		
 };
 
-export default Home
+export default TrafficLight;
