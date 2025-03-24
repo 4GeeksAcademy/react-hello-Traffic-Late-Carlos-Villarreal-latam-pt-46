@@ -17,8 +17,6 @@ import React, { useState, useEffect } from "react";
 		  	
 
     return (
-					
-			
 			<div className="support">	
 				<div className="app d-inline-flex flex-column flex-nowrap"> 
 					<div  onClick={() => setColor("red")}    className={color === "red"    ? "red light" :     "red" }  	>		</div>
